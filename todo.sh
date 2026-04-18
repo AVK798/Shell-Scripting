@@ -11,11 +11,11 @@ fi
 
 user_name=$(whoami)
 
-if [ ${user_name} != "root" ]; then
+if [ "${user_name}" != "root" ]; then
   echo "invalid user please try to swtich to root user"
   exit 1
 fi
 
 export service
 
-sh Services/${service}.sh
+bash  Services/${service}.sh
