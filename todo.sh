@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /Services/commom.sh
+
 service=$1
 
 if [ ! -f Services/${service}.sh ]; then

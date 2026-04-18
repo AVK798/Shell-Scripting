@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source /Services/commom.sh
+
 OS_update
 # Apt update
 
