@@ -7,6 +7,7 @@ Apt_updates
 Download_services
 
 Head "Install npm"
+cd frontend/
 apt install npm -y &>>$Log
 npm install &>>$Log
 status $?
