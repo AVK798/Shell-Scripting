@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source /Services/commom.sh
 OS_update
 # Apt update
 
@@ -27,5 +28,3 @@ OS_update
 
 # systemctl restart nginx
 
-git config --global user.email "vmasiakkala.9549@gmail.com"
-  git config --global user.name "AVK798"
