@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /Services/commom.sh
+source /Services/common.sh
 
 service=$1
 
