@@ -5,8 +5,8 @@ Head() {
 
 }
 
-OS_update() {
-  Head "OS_update"
-  set-hostname $1
-    apt update -y
+Apt_updates() {
+  Head "Update APT Repos"
+  set-hostname ${service}
+  apt update
 }
