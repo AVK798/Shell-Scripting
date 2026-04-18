@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /Services/common.sh
+source components/common.sh
 
 Apt_updates
 # Apt update

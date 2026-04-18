@@ -7,6 +7,6 @@ Head() {
 
 Apt_updates() {
   Head "Update APT Repos"
-  set-hostname ${service}
+  set-hostname "${service}"
   apt update
 }

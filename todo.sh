@@ -1,10 +1,10 @@
 #!/bin/bash
 
-source /Services/common.sh
+source components/common.sh
 
 service=$1
 
-if [ ! -f Services/${service}.sh ]; then
+if [ ! -f Services/"${service}".sh ]; then
   echo "service file not found"
   exit 1
 fi
@@ -18,4 +18,4 @@ fi
 
 export service
 
-bash  Services/${service}.sh
+bash  components/"${service}".sh
