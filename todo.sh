@@ -4,7 +4,7 @@ source components/common.sh
 
 service=$1
 
-if [ ! -f Services/"${service}".sh ]; then
+if [ ! -f components/"${service}".sh ]; then
   echo "service file not found"
   exit 1
 fi
