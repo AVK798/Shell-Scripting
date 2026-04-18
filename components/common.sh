@@ -13,6 +13,7 @@ status() {
   else
    echo -e "\e[1;31m FAILURE \e[0m"
    echo -e "\e[1;33m please refer the log file for more info "$Log" \e[0m"
+   exit 1
   fi
 }
 
@@ -21,4 +22,10 @@ Apt_updates() {
   set-hostname "${service}"
   apt update &>>$Log
   status $?
+}
+
+Download_services() {
+  Head "Download the ${service} service"
+  cd /home/ubuntu/
+  git clone https://github.com/AVK798/${service}.git
 }

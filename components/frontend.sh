@@ -4,6 +4,8 @@ source components/common.sh
 
 Apt_updates
 
+Download_services
+
 Head "Install npm"
 apt install npm -y &>>$Log
 npm install &>>$Log
