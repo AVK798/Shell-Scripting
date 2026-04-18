@@ -2,7 +2,7 @@
 
 source /Services/common.sh
 
-OS_update
+Apt_updates
 # Apt update
 
 # for node.js code (reactjs/vue)
