@@ -5,7 +5,7 @@ Head() {
 
 }
 
-Log=/temp/${service}.log
+export Log=/temp/${service}.log
 
 status() {
   if [ "$1" -eq 0 ]; then 
