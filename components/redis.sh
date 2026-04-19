@@ -11,7 +11,7 @@ apt install redis-server -y &>>$Log
 status $?
 
 Head "Define config settings"
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis/redis.conf
+sed -i -e 's/0.0.0.0/127.0.0.1/' /etc/redis/redis.conf
 status $?
 
 Head "restart redis server"
