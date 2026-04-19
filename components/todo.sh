@@ -13,7 +13,7 @@ cd todo/
  status $?
 
  Head "update config details of redis server"
- sed -i -e "s/redis-endpoint/localhost:6379/g" todo.servcice
+ sed -i -e "s/redis-endpoint/localhost:6379/g" todo.service
  status $?
 
  Head "Create the systemd service for todo"
