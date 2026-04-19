@@ -7,7 +7,7 @@ Apt_updates
 Download_services
 
 Head "Install go packages"
-apt install goloang -y &>>$Log
+apt install golang -y &>>$Log
 cd login/ && go mod tidy
  status $?
 
