@@ -20,5 +20,5 @@ Head "copy the systemd service"
  status $?
 
  Head "enable login servie"
- systemctl daemon-reload && systemctl eanble login.service && systemctl restart login.service
+ systemctl daemon-reload && systemctl enable login.service && systemctl restart login.service
  status $?
