@@ -12,6 +12,7 @@ source ~/.bashrc
 status $?
 
 Head "Install nvm packages"
+cd frontend/
 nvm install 14
 nvm use 14
 status $?
