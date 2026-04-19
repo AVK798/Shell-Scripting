@@ -16,6 +16,15 @@ Head "build the npm"
  npm run build &>>$Log
 
  status $?
+ 
+ Head "Create the systemd service for todo"
+ cp todo.service /etc/systemd/system/.
+ status $?
+
+ Head "restart todo.service"
+systemctl daemon-reload && systemctl enable todo.service && systemctl restart todo.service
+status $?
+
 
 
 

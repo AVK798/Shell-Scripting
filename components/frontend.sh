@@ -11,7 +11,7 @@ apt install nginx -y &>>$Log
 status $?
 
 Head "install old version of nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash &>>$Log
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash >>$Log
 source ~/.bashrc
 status $?
 
@@ -21,7 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 status $?
 
 Head "Install nvm packages"
- cd frontend/ && nvm install 14 && nvm use 14
+ cd frontend/ && nvm install 14 &>>$Log && nvm use 14
  status $?
 
 Head "Install npm"
