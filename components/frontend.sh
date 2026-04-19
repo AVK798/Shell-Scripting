@@ -6,20 +6,22 @@ Apt_updates
 
 Download_services
 
+Head "Install nginx"
+apt install nginx -y &>>$Log
+status $?
+
 Head "install old version of nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash &>>$Log
 source ~/.bashrc
 status $?
 
 Head "Export nvm package"
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" &>>$Log
 status $?
 
 Head "Install nvm packages"
- cd frontend/
- nvm install 14
- nvm use 14
+ cd frontend/ && nvm install 14 && nvm use 14
  status $?
 
 Head "Install npm"
@@ -32,12 +34,9 @@ npm run build &>>$Log
 status $?
 
 Head "Copy html content to /var/www/htnl dir"
-cp -r /dist /var/www/html/
+cp -r dist/. /var/www/html/
 status $?
 
-Head "Install nginx"
-apt install nginx -y &>>$Log
-status $?
 
 Head "Restart Nginx"
 systemctl restart nginx
