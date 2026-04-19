@@ -15,6 +15,11 @@ cd login/ && go mod tidy
   go build -o login 
   status $?
 
+Head " the conf details for users service"
+sed -i "s/localhost:8080/localhost:3003/g" systemd.service
+sed -i "s/AUTH_API_PORT=8080/AUTH_API_PORT=3001/g" systemd.service
+status $?
+
 Head "copy the systemd service"
  cp systemd.service /etc/systemd/system/login.service
  status $?
