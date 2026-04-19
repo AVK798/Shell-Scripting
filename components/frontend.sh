@@ -47,7 +47,7 @@ status $?
 
 
 Head "Define the config file for todo app"
-cp todo.conf/. /etc/nginx/sites-enabled/.
+mv todo.conf/ /etc/nginx/sites-enabled/.
 status $?
 
 
