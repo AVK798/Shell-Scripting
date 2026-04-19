@@ -7,7 +7,7 @@ Apt_updates
 Download_services
 
 Head "Install redis server"
-apt install redis-server &>>$Log
+apt install redis-server -y &>>$Log
 status $?
 
 Head "Define config settings"
