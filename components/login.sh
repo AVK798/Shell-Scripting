@@ -16,7 +16,7 @@ cd login/ && go mod tidy
   status $?
 
 Head "copy the systemd service"
- cp systmed.service /etc/systemd/system/login.service
+ cp systemd.service /etc/systemd/system/login.service
  status $?
 
  Head "enable login servie"
