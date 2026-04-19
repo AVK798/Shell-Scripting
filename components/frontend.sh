@@ -39,7 +39,9 @@ status $?
 
 Head "set the ports for services in nginx conf file"
 
-sed -i \ -e "s/localhost:8080/localhost:3001/g" \ -e "s/8080/80/g" \ -e "s#var/www/html/frontend/dist#var/www/html#g" todo.conf
+sed -i "s/localhost:8080/localhost:3001/g" todo.conf
+sed -i "s/8080/80/g"  todo.conf
+sed -i "s#var/www/html/frontend/dist#var/www/html#g" todo.conf
 
 status $?
 
