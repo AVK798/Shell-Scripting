@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source components/common.sh
+
 Apt_updates
 
 Download_services
