@@ -11,11 +11,6 @@ Head "Install npm"
 cd todo/
  npm install &>>$Log
  status $?
-
-Head "build the npm"
- npm run build &>>$Log
-
- status $?
  
  Head "Create the systemd service for todo"
  cp todo.service /etc/systemd/system/.
