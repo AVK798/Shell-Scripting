@@ -27,6 +27,6 @@ Apt_updates() {
 Download_services() {
   Head "Download the ${service} service"
   cd /home/ubuntu/
-  git clone https://github.com/AVK798/${service}.git &>>$Log
+  rm -rf ${service} && git clone https://github.com/AVK798/${service}.git &>>$Log
   status $?
 }
