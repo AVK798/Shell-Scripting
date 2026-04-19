@@ -37,6 +37,17 @@ Head "Copy html content to /var/www/htnl dir"
 cp -r dist/. /var/www/html/
 status $?
 
+Head "set the ports for services in nginx conf file"
+
+sed -i "s/localhost:8080/localhost:3001/g" todo.conf
+
+status $?
+
+
+Head "Define the config file for todo app"
+cp todo.conf /etc/nginx/sites-enabled/default/.
+status $?
+
 
 Head "Restart Nginx"
 systemctl restart nginx
