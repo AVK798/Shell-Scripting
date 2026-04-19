@@ -13,6 +13,7 @@ status $?
 
 Head "mvn compile"
 cd users/
+apt install maven -y &>>$Log
 mvn clean package &>>$Log
 status $?
 
