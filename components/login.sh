@@ -7,11 +7,12 @@ Apt_updates
 Download_services
 
 Head "Install go packages"
+apt install goloang -y &>>$Log
 cd login/ && go mod tidy
  status $?
 
  Head "Build login service"
-  go build -o login
+  go build -o login 
   status $?
 
 Head "copy the systemd service"
