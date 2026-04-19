@@ -6,19 +6,23 @@ Apt_updates
 
 Download_services
 
-Head "install old version of npm"
+Head "install old version of nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 source ~/.bashrc
 status $?
 
-Head "Install nvm packages"
-cd frontend/
-nvm install 14
-nvm use 14
+Head "Export nvm package"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 status $?
 
+Head "Install nvm packages"
+ cd frontend/
+ nvm install 14
+ nvm use 14
+ status $?
+
 Head "Install npm"
-cd frontend/
 apt install npm -y &>>$Log
 npm install &>>$Log
 status $?
