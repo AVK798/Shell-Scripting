@@ -19,7 +19,7 @@ status() {
 
 Apt_updates() {
   Head "Update APT Repos"
-  set-hostname "${service}"
+  set host-name "${service}"
   apt update &>>$Log
   status $?
 }
@@ -28,4 +28,5 @@ Download_services() {
   Head "Download the ${service} service"
   cd /home/ubuntu/
   git clone https://github.com/AVK798/${service}.git &>>$Log
+  status $?
 }
