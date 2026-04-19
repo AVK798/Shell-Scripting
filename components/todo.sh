@@ -11,7 +11,11 @@ Head "Install npm"
 cd todo/
  npm install &>>$Log
  status $?
- 
+
+ Head "update config details of redis server"
+ sed -i -e "s/redis-endpoint/localhost:6379/g" todo.servcice
+ status $?
+
  Head "Create the systemd service for todo"
  cp todo.service /etc/systemd/system/.
  status $?
