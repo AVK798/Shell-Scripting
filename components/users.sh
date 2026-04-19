@@ -8,7 +8,7 @@ Apt_updates
 Download_services
 
 Head " Install Java"
-apt install openjdk-8-jdk &>>$Log
+apt install openjdk-8-jdk -y &>>$Log
 status $?
 
 Head "mvn compile"
